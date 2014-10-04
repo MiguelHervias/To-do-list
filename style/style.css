@@ -1,0 +1,87 @@
+/*************
+GENERAL STYLE
+*************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  background: #DDDDDD;
+}
+
+
+/*************
+ARTICLE STYLE
+*************/
+article {
+  border: 1px solid #aaa;
+  background: #eee;
+  width: 50%;
+  margin: 20px auto;
+}
+
+
+/*************
+SCREEN STYLE
+*************/
+#screen {
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#content > h3 {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  color: rgba(0,0,0,0.6);
+
+}
+
+#content > p {
+  padding-left: 40px;
+  color: rgba(0,0,0,0.6);
+}
+
+#content > #list {
+  padding-left: 60px;
+  color: rgba(0,0,0,0.6);
+}
+
+
+/*************
+MENU STYLE
+*************/
+#menu {
+  width: 100%;
+  height: 189px;
+  margin: 0 auto;
+}
+
+#menu > form > input {
+  width: 100%;
+  padding: 10px 0px 10px 12px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #555;
+  border: 1px solid #aaa;
+  background-color: #fff;
+}
+
+#menu > form > input[type="button"] {
+  border: 0px solid transparent;
+  width: 100%;
+  color: rgba(0,0,0,0.6);
+  font-size: 16px;
+  font-weight: bold;
+  height: 38px;
+  border: 1px solid #aaa;
+  background: #b7b7b7;
+}
+
+.done {
+  text-decoration: line-through;
+}
