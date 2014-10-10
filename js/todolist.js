@@ -28,20 +28,26 @@ $("#input").focus(function() {
   });
 });
 
-//BUTTON EVENTS
-$(document).on( "click", "#add, #cleanAll, #cleanDone, #list li, #url", function() {
-  if ($(this).attr('id') == "add") {
-    haveText();
-  }else if ($(this).attr('id') == "cleanAll") {
-    $("#list li").remove();
-  }else if ($(this).attr('id') == "cleanDone") {
-    $("#list .done").remove();
-  }else if ($(this).parent().attr('id') == "list") {
-    $(this).toggleClass("done");
-  }else if ($(this).attr('id') == "url") {
-    var url = prompt("Insert a xhr-json url. For example: http://ironhack.com:3000/resources/todosample.json");
-    $.get(url, function(responseText) {
-      extractingContent(responseText);
-    });
-  }
+//ADD EVENT
+$(document).on( "click", "#add", function() {
+  haveText();
+});
+//CLEANALL EVENT
+$(document).on( "click", "#cleanAll", function() {
+  $("#list li").remove();
+});
+//CLEANDONE EVENT
+$(document).on( "click", "#cleanDone", function() {
+  $("#list .done").remove();
+});
+//DONEUNDONE STATE
+$(document).on( "click", "#list li", function() {
+  $(this).toggleClass("done");
+});
+//JSON ADD
+$(document).on( "click", "#url", function() {
+  var url = prompt("Insert a xhr-json url. For example: http://ironhack.com:3000/resources/todosample.json");
+  $.get(url, function(responseText) {
+    extractingContent(responseText);
+  });
 });
