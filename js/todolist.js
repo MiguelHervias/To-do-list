@@ -6,9 +6,8 @@ function haveText() {
   var contentAdd = $("#input").val();
   if (contentAdd != "") {
     $("#list").append("<li>" + contentAdd + "</li>");
-    $("#input").val("");
-    console.log($("#input").val(""));
-    createTask($("#input").val(""));
+    // console.log($("#input").val());
+    createTask($("#input").val());
     //console.log(createTask());
   } 
 }
@@ -22,6 +21,7 @@ function createTask(name) {
 
   listTask.push(task);
   localStorage.setItem("tasks", JSON.stringify(listTask));
+  console.log(listTask);
 
   // var contentAdd = $("#input").val();
   // if (contentAdd != "") {
