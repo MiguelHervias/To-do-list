@@ -1,10 +1,33 @@
+var listTask = [];
+var data = JSON.parse(localStorage.getItem("tasks"));
+
 //HAVE I TEXT?
 function haveText() {
   var contentAdd = $("#input").val();
   if (contentAdd != "") {
     $("#list").append("<li>" + contentAdd + "</li>");
     $("#input").val("");
+    console.log($("#input").val(""));
+    createTask($("#input").val(""));
+    //console.log(createTask());
   } 
+}
+
+//CREATE ELEMENT
+function createTask(name) {
+  var task = { 
+    nameTask: name,
+    doneTask: false,
+  };
+
+  listTask.push(task);
+  localStorage.setItem("tasks", JSON.stringify(listTask));
+
+  // var contentAdd = $("#input").val();
+  // if (contentAdd != "") {
+  //   $("#list").append("<li>" + contentAdd + "</li>");
+  //   $("#input").val("");
+  // } 
 }
 
 //EXTRACT JSON CONTENT
